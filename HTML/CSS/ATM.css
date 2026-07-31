@@ -1,0 +1,333 @@
+/* ATM System Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.atm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.atm-machine {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    color: #ecf0f1;
+}
+
+/* Display Section */
+.display-section {
+    margin-bottom: 30px;
+}
+
+.screen {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 3px solid #f39c12;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(243, 156, 18, 0.3);
+}
+
+.screen-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.screen-label {
+    font-size: 12px;
+    color: #f39c12;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.balance-amount {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2ecc71;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.screen-message {
+    font-size: 14px;
+    color: #ecf0f1;
+    min-height: 20px;
+    font-style: italic;
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-align: center;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ecf0f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #f39c12;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #1a1a1a;
+    color: #2ecc71;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+    background-color: #0a0a0a;
+}
+
+.form-group input::placeholder {
+    color: #7f8c8d;
+}
+
+/* Attempt Info */
+.attempt-info {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid #f39c12;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #ecf0f1;
+}
+
+.attempt-info p {
+    margin: 0;
+}
+
+/* Buttons */
+.withdraw-btn,
+.reset-btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.withdraw-btn {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.withdraw-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.5);
+    transform: translateY(-2px);
+}
+
+.withdraw-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.withdraw-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.reset-btn {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.reset-btn:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+    transform: translateY(-2px);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+/* History Section */
+.history-section {
+    border-top: 2px solid #f39c12;
+    padding-top: 20px;
+}
+
+.history-section h3 {
+    font-size: 16px;
+    color: #f39c12;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.transaction-list {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.transaction-list li {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 3px solid #2ecc71;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #ecf0f1;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.transaction-list li.error {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left-color: #e74c3c;
+}
+
+.transaction-list li.empty-history {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* Scrollbar Styling */
+.transaction-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.transaction-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.transaction-list::-webkit-scrollbar-thumb {
+    background: #f39c12;
+    border-radius: 10px;
+}
+
+.transaction-list::-webkit-scrollbar-thumb:hover {
+    background: #e67e22;
+}
+
+/* Alerts */
+.alert {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.alert.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+}
+
+.alert.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.alert.warning {
+    background-color: rgba(243, 156, 18, 0.2);
+    border: 2px solid #f39c12;
+    color: #f39c12;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .atm-machine {
+        padding: 20px;
+    }
+
+    .balance-amount {
+        font-size: 28px;
+    }
+
+    .form-section h2 {
+        font-size: 20px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .withdraw-btn,
+    .reset-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

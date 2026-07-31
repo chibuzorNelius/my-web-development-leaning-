@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url(/IMAGES/random\ bg.jpeg);
+}
+form{
+    box-shadow: 0 0 10px chocolate;
+    border-radius: 6px;
+    width: 300px;
+    padding: 30px 20px 40px;
+    margin: auto;
+}
+label{
+    font-size: 12px;
+    font-weight: 600;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    margin: 4px 0 12px;   
+}
+input[type=submit]{
+    background-color: rgb(246, 52, 85);
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+input[type=submit]:hover{
+    background-color: rgb(170, 2, 30);
+
+}
+input:focus{
+    outline: 2px solid  pink;
+}

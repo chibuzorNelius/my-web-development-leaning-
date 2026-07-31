@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nelius Ai Academy</title>
+    <link rel="stylesheet" href="../../CSS/quizApp.css" />
+</head>
+<body>
+    <div class="page-shell">
+        <header class="page-header">
+            <div>
+                <h1>Nelius Ai Academy</h1>
+                <p>Login and answer  10 web  questions, if you have less then %50, just giveUp, Js is not for you </p>
+            </div>
+        </header>
+
+        <main id="app">
+            <section id="login-screen" class="card active">
+                <div class="field-group">
+                    <label for="user-name">Name</label>
+                    <input id="user-name" type="text" placeholder="Enter your name" />
+                </div>
+                <div class="field-group">
+                    <label for="user-password">Password</label>
+                    <input id="user-password" type="password" placeholder="Enter password" />
+                </div>
+                <button id="login-btn" class="primary-btn">Login</button>
+                <p class="hint">if you dont know the password, you ask question <strong>Nelius</strong>.</p>
+                <p id="login-message" class="message"></p>
+            </section>
+
+            <section id="quiz-screen" class="card">
+                <div class="quiz-top">
+                    <div>
+                        <span class="label">Student:</span>
+                        <strong id="user-label"></strong>
+                    </div>
+                    <div>
+                        <span class="label">Time left:</span>
+                        <strong id="timer">00:00</strong>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p id="question-number" class="question-number"></p>
+                    <h2 id="question-text" class="question-text"></h2>
+                    <div id="options" class="options"></div>
+                </div>
+
+                <button id="next-btn" class="primary-btn" disabled>Next</button>
+            </section>
+
+            <section id="result-screen" class="card">
+                <h2>Quiz Result</h2>
+                <p id="result-name"></p>
+                <p id="result-score"></p>
+                <p id="result-time"></p>
+                <button id="restart-btn" class="primary-btn">Restart Quiz</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../../javaScript/quizApp.js"></script>
+</body>
+</html>

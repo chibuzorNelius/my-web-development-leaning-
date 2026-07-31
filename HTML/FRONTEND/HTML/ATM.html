@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML/CSS/ATM.css">
+    <title>ATM System</title>
+</head>
+<body>
+    <div class="atm-container">
+        <div class="atm-machine">
+            <!-- Display Screen -->
+            <div class="display-section">
+                <div class="screen">
+                    <div class="screen-content">
+                        <p class="screen-label">Current Balance</p>
+                        <p class="balance-amount">$<span id="balance">20000</span></p>
+                        <p class="screen-message" id="screenMessage">Welcome to ATM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Withdrawal Form -->
+            <div class="form-section">
+                <h2>Withdrawal</h2>
+                
+                <div class="form-group">
+                    <label for="amount">Amount to Withdraw:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" min="1" step="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pin">PIN:</label>
+                    <input type="password" id="pin" name="pin" placeholder="Enter your PIN" maxlength="4" required>
+                </div>
+
+                <div class="attempt-info">
+                    <p>Attempts remaining: <span id="attempts">3</span></p>
+                </div>
+
+                <button type="button" id="withdrawBtn" class="withdraw-btn">Withdraw</button>
+                <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="history-section">
+                <h3>Last Transactions</h3>
+                <ul id="transactionHistory" class="transaction-list">
+                    <li class="empty-history">No transactions yet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javaScript/ATM.js"></script>
+</body>
+</html>

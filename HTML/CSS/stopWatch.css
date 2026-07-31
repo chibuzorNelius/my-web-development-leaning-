@@ -1,0 +1,25 @@
+/* Stop Watch Styles */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ccc;
+}
+
+.counter {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+.buttons button:disabled {  /*what does. Disabled do?
+     */
+    background-color: #ccc;
+    cursor: not-allowed;
+}

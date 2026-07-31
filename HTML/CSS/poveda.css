@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    box-sizing: border-box;
+
+}
+
+.container {
+    max-width: 90%;
+    height: 95vh;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* background-color: green; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    
+
+}
+
+header {
+    display: flex;
+    
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    margin: 2vw 3vw 0 3vw;
+    align-items: center;
+    flex-wrap: nowrap;
+   
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2.3vw;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.about {
+    border-bottom: 3px solid gray;
+}
+
+.visit {
+    display: flex;
+}
+
+.visit i {
+    margin-left: 0.8vw;
+
+}
+
+.top {
+    /* border: 1px solid green; */
+    height: 70vh;
+    background: linear-gradient(180deg, rgba(185, 117, 117, 0.103), rgba(0, 0, 0, 0.178)),
+        url(/IMAGES/POVEDA-IMAGE.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+header h1 {
+    color: white;
+    font-size: 20px;
+}
+
+section {
+    margin: 20vh 0 30vh 10vw;
+}
+
+section h2 {
+    font-size: 3vw;
+    color: white;
+    margin-bottom: 1vw;
+}
+
+section h1 {
+    font-size: 6vw;
+    color: white;
+}
+
+.buttom {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    text-align: center;
+    background-color: rgb(192, 193, 194);
+    height:calc(95vh - 70vh);
+
+}
+
+.buttom p {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  
+
+}
+
+.buttom h1 {
+
+    padding-top: 5vh;
+    font-size: 100%;
+
+    @media(width: 400px){
+
+    }
+}
+
+
+
+
+
+
+-------------------------------------------------------------------- .dropdown ul li {
+    color: rgb(42, 201, 174);
+    background-color: rgba(255, 255, 255, 0.274);
+    border: 1px solid rgb(247, 31, 31);
+
+}

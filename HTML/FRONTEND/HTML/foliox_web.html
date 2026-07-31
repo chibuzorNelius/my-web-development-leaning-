@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/HTML/CSS/foliox_web.css">
+    <title>foliox website</title>
+</head>
+
+<body>
+    <header id="heading">
+        <div class="logo">
+            <img src="/IMAGES/foliox_web_logo.png" alt="">
+            <h1>Folio <span>x</span></h1>
+
+        </div>
+        <ul>
+            <li><a href="#">Home </a></li>
+
+            <li><a href="#">About </a></li>
+            <li class="Service"><a href="#">Service</a></li>
+            <!-- <ul>
+                <li><a href="#">money master</a></li>
+                <li><a href="#">money master</a></li>
+                <li><a href="#">money master</a></li>
+            </ul> -->
+            <li><a href="#">Portfolio </a></li>
+            <li><a href="#">Blog </a></li>
+            <li><a href="#">Contact </a></li>
+        </ul>
+        <div class="social_icons">
+            <a href="#"><i class="fa-brands fa-facebook-f fa-lg" style="color: white;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-lg" style="color: white;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in fa-lg" style="color: white;"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope fa-lg" style="color: white;"></i></a>
+        </div>
+        <div class="darkMood">
+            <button id="darkButton" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fa-regular fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <aside class="left">
+            <h1>james</h1>
+            <h1 class="s">smith</h1>
+            <h4>web design base in new york</h4>
+            <button><a href="#">Get Connected</a></button>
+        </aside>
+        <aside class="right">
+            <img src="/IMAGES/man no bg.png" alt="man">
+        </aside>
+    </section>
+    <section class="cards">
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-gear fa-2xl" style="color: rgb(16, 69, 166);"></i>
+
+            <h3>Deeper Skillset</h3>
+            <p> perferendis? Laudantium iste incidunt tgrg brtbb t g trbrtb brbrv exercitationem, veniam labore ab
+                aliquam nesciunt repellat.</p>
+        </div>
+    </section>
+
+    <script>
+        let header = document.getElementById("heading");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                const headerBg = getComputedStyle(document.body).getPropertyValue("--header-bg");
+                header.style.backgroundColor = headerBg;
+                header.style.borderRadius = "20px";
+                header.style.marginTop = "-3px";
+            }
+        });
+        // let it remove the background color when the user scrolls back to the top
+        window.addEventListener("scroll", function () {
+            if (window.scrollY === 0) {
+                header.style.backgroundColor = "transparent";
+                header.style.borderRadius = "0px";
+                header.style.marginTop = "3vh";
+            }
+        });
+
+        const darkButton = document.getElementById("darkButton");
+        const themeIcon = darkButton.querySelector("i");
+
+        const applyTheme = (theme) => {
+            if (theme === "dark") {
+                document.body.classList.add("dark-mode");
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                document.body.classList.remove("dark-mode");
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+            localStorage.setItem("folioxTheme", theme);
+        };
+
+        const savedTheme = localStorage.getItem("folioxTheme") || "light";
+        applyTheme(savedTheme);
+
+        darkButton.addEventListener("click", () => {
+            applyTheme(document.body.classList.contains("dark-mode") ? "light" : "dark");
+        });
+    </script>
+</body>
+
+</html>
